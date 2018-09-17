@@ -22,9 +22,10 @@ func main() {
     }
 
     fmt.Fprintln(outFile, "Start logging...")
-    t := time.Tick(1 * time.Second)
+    t := time.Tick(5 * time.Second)
     for now := range t {
         fmt.Fprintf(outFile, "%v \n", now)
+        time.Sleep(2 * time.Second)
     }
 
 }
